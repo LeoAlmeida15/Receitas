@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas | Receitas Fáceis e Econômicas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="index.html">Receitas <span>Fáceis</span></a>
+  <nav>
+    <a href="index.html">Início</a><a href="receitas.html">Receitas</a>
+    <a href="categorias.html">Categorias</a><a href="contato.html">Contato</a>
+    <a href="login.html" id="loginLink">Entrar</a>
+    <button class="link-button hidden" id="logoutBtn">Sair</button>
+  </nav>
+</header>
+<main class="container page">
+  <p class="eyebrow">Cozinhe melhor, gaste menos</p><h1>Dicas culinárias e economia</h1>
+  <div id="dicas" class="info-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+
+  <h2 style="margin-top:50px">Guia de ingredientes</h2>
+  <div class="filters" style="grid-template-columns:1fr auto">
+    <input id="buscaIng" type="search" placeholder="Pesquisar ingrediente...">
+    <button class="btn" id="buscarIng">Pesquisar</button>
+  </div>
+  <div id="ingredientes" class="info-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+</main>
+<footer>Receitas Fáceis e Econômicas © 2026</footer>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dicas.js"></script>
+</body>
+</html>

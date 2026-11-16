@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova receita | Receitas Fáceis e Econômicas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="index.html">Receitas <span>Fáceis</span></a>
+  <nav>
+    <a href="index.html">Início</a><a href="receitas.html">Receitas</a>
+    <a href="categorias.html">Categorias</a><a href="contato.html">Contato</a>
+    <a href="login.html" id="loginLink">Entrar</a>
+    <button class="link-button hidden" id="logoutBtn">Sair</button>
+  </nav>
+</header>
+<main class="container page narrow">
+  <p class="eyebrow" id="eyebrow">Seu livro de receitas</p>
+  <h1 id="titulo">Nova receita</h1>
+  <form id="receitaForm" class="form-card">
+    <label>Nome da receita<input id="nome" required maxlength="150"></label>
+    <label>Descrição curta<input id="descricao" maxlength="500" placeholder="Uma frase sobre a receita"></label>
+    <label>Categoria
+      <select id="categoria"><option value="">Sem categoria</option></select>
+    </label>
+    <label>Tempo de preparo (minutos)<input id="tempo" type="number" min="1" max="10080"></label>
+    <label>Dificuldade
+      <select id="dificuldade"><option>Fácil</option><option>Média</option><option>Difícil</option></select>
+    </label>
+    <label>Ingredientes (um por linha)<textarea id="ingredientes" rows="7" required></textarea></label>
+    <label>Modo de preparo (um passo por linha)<textarea id="modo" rows="8" required></textarea></label>
+    <label>Imagem (JPG, PNG, WEBP ou GIF, até 3 MB)
+      <input id="imagem" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+    </label>
+    <div id="imagemAtual" class="hidden">
+      <img id="preview" class="recipe-photo" alt="Imagem da receita">
+      <label class="check"><input type="checkbox" id="removerImagem"> Remover imagem atual</label>
+    </div>
+    <label class="check"><input type="checkbox" id="publica" checked> Receita pública (visível para todos)</label>
+    <div class="actions">
+      <button class="btn" type="submit" id="salvar">Salvar receita</button>
+      <a class="btn secondary" href="minhas-receitas.html">Cancelar</a>
+    </div>
+    <p id="status" class="status"></p>
+  </form>
+</main>
+<footer>Receitas Fáceis e Econômicas © 2026</footer>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/nova-receita.js"></script>
+</body>
+</html>
